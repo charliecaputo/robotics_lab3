@@ -12,8 +12,8 @@ def test_planar_manipulator():
     theta2 = np.pi/2
     
     # Define DH parameters for each joint
-    dh_params = [[theta1, 0, a1, 0],
-        		 [theta2, 0, a2, 0]]
+    dh_params = [[0, a1, 0, theta1],
+        		 [0, a2, 0, theta2]]
     
     # Compute kinematics
     H = kinematic_chain(dh_params)
